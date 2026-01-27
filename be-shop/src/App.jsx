@@ -1,6 +1,9 @@
 import './App.css'
+import AboutUs from './components/AboutUs'
+import BlogSection from './components/BlogSection'
 import Features from './components/Features'
 import Hero from './components/Hero'
+import NewArrivals from './components/NewArrivals'
 import NewCollection from './components/NewCollection'
 import PromoBanner from './components/PromoBanner'
 import ShowcaseCard from './components/ShowcaseCard'
@@ -17,6 +20,10 @@ function App() {
       <Features/>
       <TopCategories/>
       <NewCollection/>
+      <AboutUs/>
+      <NewArrivals/>
+      <BlogSection/>
+
     </>
   )
 }
