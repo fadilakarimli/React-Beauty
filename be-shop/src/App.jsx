@@ -1,30 +1,18 @@
 import './App.css'
-import AboutUs from './components/AboutUs'
-import BlogSection from './components/BlogSection'
-import Features from './components/Features'
-import Hero from './components/Hero'
-import NewArrivals from './components/NewArrivals'
-import NewCollection from './components/NewCollection'
-import PromoBanner from './components/PromoBanner'
-import ShowcaseCard from './components/ShowcaseCard'
-import TopCategories from './components/TopCategories'
-import TrendingProducts from './components/TrendingProducts'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <>
-      <Hero />
-      <TrendingProducts />
-      <ShowcaseCard/>
-      <PromoBanner />
-      <Features/>
-      <TopCategories/>
-      <NewCollection/>
-      <AboutUs/>
-      <NewArrivals/>
-      <BlogSection/>
-
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+      <Footer />
+    </Router>
   )
 }
 

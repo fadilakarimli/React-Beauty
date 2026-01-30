@@ -1,15 +1,11 @@
 import heroImg from "../assets/images/header-logo.svg";
-import bannerImg from "../assets/images/banner.jpg";
 import { Link } from "react-router-dom";
-
-import { CiSearch } from "react-icons/ci";
-import { CiUser } from "react-icons/ci";
-import { CiHeart } from "react-icons/ci";
+import { CiSearch, CiUser, CiHeart } from "react-icons/ci";
 import { FaBasketShopping } from "react-icons/fa6";
 
-const Hero = () => {
+const Navbar = () => {
   return (
-    <section className="bg-[#fdf1ec]">
+    <div className="bg-[#fdf1ec]">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-6 px-6">
         <div className="flex items-center gap-2">
           <img src={heroImg} alt="logo" className="h-10" />
@@ -44,36 +40,8 @@ const Hero = () => {
           </span>
         </div>
       </div>
-
-      <div
-        className="bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${bannerImg})` }}
-      >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center px-6 py-24">
-          <div>
-            <p className="text-pink-500 italic text-lg mb-2">
-              BeShop Professional
-            </p>
-
-            <h1 className="text-6xl font-light leading-tight mb-6">
-              Beauty & Care
-            </h1>
-
-            <p className="text-gray-600 max-w-md mb-8">
-              Nourish your skin with toxin-free cosmetic products. With the
-              offers that you can't refuse.
-            </p>
-
-            <button className="bg-black text-white px-8 py-4 uppercase text-sm tracking-wider hover:bg-pink-500 transition">
-              Shop Now
-            </button>
-          </div>
-
-          <div></div>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 };
 
-export default Hero;
+export default Navbar;

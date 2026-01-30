@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
-
-// Şəkil importları
 import productImg1 from '../assets/images/product-img1.jpg';
 import productImg2 from '../assets/images/product-img2.jpg';
 import productImg3 from '../assets/images/product-img3.jpg';
@@ -56,7 +54,6 @@ const ProductCard = ({ product }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Product Image Container */}
       <div className="relative overflow-hidden rounded-lg bg-gray-50 mb-6">
         <div className="relative h-[380px] w-[150]">
           <img
@@ -67,7 +64,6 @@ const ProductCard = ({ product }) => {
             }`}
           />
           
-          {/* Badges */}
           <div className="absolute top-4 right-4 flex flex-col gap-2">
             {product.badge && (
               <span className={`
@@ -85,7 +81,6 @@ const ProductCard = ({ product }) => {
             )}
           </div>
 
-          {/* Hover Overlay */}
           <div className={`
             absolute inset-0 bg-black transition-opacity duration-300
             ${isHovered ? 'opacity-5' : 'opacity-0'}
@@ -93,7 +88,6 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
 
-      {/* Product Info */}
       <div className="text-center space-y-3">
         <h3 className="text-lg font-medium text-gray-800 tracking-wide">
           {product.name}
