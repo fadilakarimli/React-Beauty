@@ -1,4 +1,3 @@
-import React from 'react';
 import AboutUs from '../components/AboutUs';
 import BeautyGallery from '../components/BeautyGallery';
 import BlogSection from '../components/BlogSection';
