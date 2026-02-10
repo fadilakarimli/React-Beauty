@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaPlay, FaTimes } from "react-icons/fa";
-import Shape1 from "../assets/images/info-item-bg2.jpg";
-import Shape2 from "../assets/images/info-item-img2.jpg";
+import Shape1 from "../../assets/images/info-item-bg2.jpg";
+import Shape2 from "../../assets/images/info-item-img2.jpg";
 
 const AboutUs = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);

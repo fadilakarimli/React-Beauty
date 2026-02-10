@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { FaInstagram } from 'react-icons/fa';
-import image1 from '../assets/images/insta-photo1.jpg';
-import image2 from '../assets/images/insta-photo2.jpg';
-import image3 from '../assets/images/insta-photo3.jpg';
-import image4 from '../assets/images/insta-photo4.jpg';
-import image5 from '../assets/images/insta-photo5.jpg';
-import image6 from '../assets/images/insta-photo6.jpg';
+import image1 from '../../assets/images/insta-photo1.jpg';
+import image2 from '../../assets/images/insta-photo2.jpg';
+import image3 from '../../assets/images/insta-photo3.jpg';
+import image4 from '../../assets/images/insta-photo4.jpg';
+import image5 from '../../assets/images/insta-photo5.jpg';
+import image6 from '../../assets/images/insta-photo6.jpg';
 
 const BeautyGallery = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);

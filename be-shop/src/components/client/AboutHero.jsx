@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaTruck, FaPhoneAlt, FaUserTie } from 'react-icons/fa';
-import bgImage from '../assets/images/detail-main-bg.jpg';
+import bgImage from '../../assets/images/detail-main-bg.jpg';
 
 const AboutHero = () => {
   const features = [

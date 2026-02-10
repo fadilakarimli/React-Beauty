@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import newsletterImg from '../assets/images/subscribe-img.png';
+import newsletterImg from '../../assets/images/subscribe-img.png';
 
 const NewsletterSection = () => {
   const [email, setEmail] = useState('');

@@ -1,5 +1,5 @@
 import React from 'react';
-import brandImage from '../assets/images/discount-bg.jpg'; // şəkili özün import et
+import brandImage from '../../assets/images/discount-bg.jpg'; // şəkili özün import et
 
 const SuccessStory = () => {
   return (

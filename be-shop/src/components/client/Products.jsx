@@ -1,9 +1,9 @@
 import ProductCard from "./ProductCard";
 
-import p1 from "../assets/images/product-img1.jpg";
-import p2 from "../assets/images/product-img2.jpg";
-import p3 from "../assets/images/product-img3.jpg";
-import p4 from "../assets/images/product-img4.jpg";
+import p1 from "../../assets/images/product-img1.jpg";
+import p2 from "../../assets/images/product-img2.jpg";
+import p3 from "../../assets/images/product-img3.jpg";
+import p4 from "../../assets/images/product-img4.jpg";
 
 const Products = () => {
   return (

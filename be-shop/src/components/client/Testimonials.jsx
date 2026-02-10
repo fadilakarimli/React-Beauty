@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import avatar1 from '../assets/images/testimonial-img.jpg'; 
+import avatar1 from '../../assets/images/testimonial-img.jpg'; 
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

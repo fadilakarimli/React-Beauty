@@ -1,7 +1,7 @@
 import { useState } from "react";
-import img1 from "../assets/images/top-categories-img1.jpg";
-import img2 from "../assets/images/top-categories-img2.jpg";
-import img3 from "../assets/images/top-categories-img3.jpg";
+import img1 from "../../assets/images/top-categories-img1.jpg";
+import img2 from "../../assets/images/top-categories-img2.jpg";
+import img3 from "../../assets/images/top-categories-img3.jpg";
 
 export default function TopCategories() {
   const [hoveredId, setHoveredId] = useState(null);

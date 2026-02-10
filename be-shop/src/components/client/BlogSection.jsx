@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoArrowForward } from 'react-icons/io5';
-import blogImg1 from '../assets/images/blog-img1.jpg';
-import blogImg2 from '../assets/images/blog-img2.jpg';
+import blogImg1 from '../../assets/images/blog-img1.jpg';
+import blogImg2 from '../../assets/images/blog-img2.jpg';
 
 const BLOG_POSTS = [
   {

@@ -1,5 +1,5 @@
-import productImage from "../assets/images/info-item-img1.jpg";
-import rightImg from "../assets/images/info-item-bg1.jpg"; 
+import productImage from "../../assets/images/info-item-img1.jpg";
+import rightImg from "../../assets/images/info-item-bg1.jpg"; 
 
 
 export default function NewCollection() {

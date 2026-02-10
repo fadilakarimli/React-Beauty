@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
-import productImg1 from '../assets/images/product-img1.jpg';
-import productImg2 from '../assets/images/product-img2.jpg';
-import productImg3 from '../assets/images/product-img3.jpg';
-import productImg5 from '../assets/images/product-img5.jpg';
+import productImg1 from '../../assets/images/product-img1.jpg';
+import productImg2 from '../../assets/images/product-img2.jpg';
+import productImg3 from '../../assets/images/product-img3.jpg';
+import productImg5 from '../../assets/images/product-img5.jpg';
 
 const PRODUCTS = [
   {
