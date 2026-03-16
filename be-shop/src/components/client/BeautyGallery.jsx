@@ -19,7 +19,8 @@ const BeautyGallery = () => {
     { id: 6, src: image6 }
   ];
 
-  return (
+ return (
+  <div className="container mx-auto">
     <div className="flex gap-0">
       {images.map((image, index) => (
         <div
@@ -42,7 +43,8 @@ const BeautyGallery = () => {
         </div>
       ))}
     </div>
-  );
+  </div>
+);
 };
 
 export default BeautyGallery;

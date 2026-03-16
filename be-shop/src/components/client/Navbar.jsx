@@ -15,7 +15,7 @@ const Navbar = () => {
         <nav className="hidden md:flex gap-8 text-sm uppercase tracking-wide">
           <Link to="/" className="text-pink-500 hover:text-pink-600 transition-colors">Home</Link>
           <Link to="/about" className="hover:text-pink-500 transition-colors">About</Link>
-          <a className="hover:text-pink-500 transition-colors cursor-pointer">Shop</a>
+          <Link to="/shop" className="hover:text-pink-500 transition-colors">Shop</Link>
           <a className="hover:text-pink-500 transition-colors cursor-pointer">Categories</a>
           <a className="hover:text-pink-500 transition-colors cursor-pointer">Blog</a>
           <a className="hover:text-pink-500 transition-colors cursor-pointer">Contact</a>

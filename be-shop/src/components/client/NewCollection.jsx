@@ -4,9 +4,9 @@ import rightImg from "../../assets/images/info-item-bg1.jpg";
 
 export default function NewCollection() {
   return (
-    <section className="py-20 px-4 bg-white overflow-hidden">
+    <section className="bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           <div className="relative flex justify-center items-center h-96 lg:h-full">
 
             <div 
@@ -17,7 +17,7 @@ export default function NewCollection() {
           </div>
 
           <div 
-            className="relative flex flex-col justify-center space-y-8 p-8 rounded-lg bg-cover bg-center"
+            className="relative flex flex-col justify-center space-y-8 p-8  bg-cover bg-center"
             style={{ backgroundImage: `url(${rightImg})` }}
           >
             <div className="absolute inset-0 bg-opacity-95 rounded-lg"></div>

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ClientLayout from './components/client/ClientLayout'
 import HomePage from './pages/client/HomePage'
 import AboutPage from './pages/client/AboutPage'
+import ShopPage from './pages/client/ShopPage'
 
 // Admin imports
 import AdminLayout from './components/admin/AdminLayout'
@@ -26,6 +27,7 @@ function AppContent() {
       <Route path="/" element={<ClientLayout />}>
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
+        <Route path="shop" element={<ShopPage />} />
       </Route>
 
       {/* Admin Routes */}

@@ -42,7 +42,7 @@ const PRODUCTS = [
     image: productImg5,
     badge: 'NEW',
     badgeColor: 'rose'
-  }
+  },
 ];
 
 const ProductCard = ({ product }) => {
