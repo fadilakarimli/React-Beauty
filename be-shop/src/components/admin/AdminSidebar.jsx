@@ -24,6 +24,11 @@ function AdminSidebar() {
       icon: <FaBullhorn className="w-5 h-5" />
     },
     {
+      title: 'Top Categories',
+      path: '/admin/top-categories',
+      icon: <FaTh className="w-5 h-5" />
+    },
+    {
       title: 'Products',
       path: '/admin/products',
       icon: <FaShoppingBag className="w-5 h-5" />

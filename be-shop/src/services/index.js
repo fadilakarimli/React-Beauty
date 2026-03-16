@@ -23,4 +23,11 @@ export {
   useCreateShowcaseLogoMutation,
   useUpdateShowcaseLogoMutation,
   useDeleteShowcaseLogoMutation,
+
+  // Top Categories
+  useGetTopCategoriesQuery,
+  useGetTopCategoryByIdQuery,
+  useCreateTopCategoryMutation,
+  useUpdateTopCategoryMutation,
+  useDeleteTopCategoryMutation,
 } from './apiSlice';

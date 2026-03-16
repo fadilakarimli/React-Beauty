@@ -19,6 +19,9 @@ import ShowcaseLogosEdit from './pages/admin/showcase-logos/ShowcaseLogosEdit'
 import PromoBannersList from './pages/admin/promo-banners/PromoBannersList'
 import PromoBannerCreate from './pages/admin/promo-banners/PromoBannerCreate'
 import PromoBannerEdit from './pages/admin/promo-banners/PromoBannerEdit'
+import TopCategoriesList from './pages/admin/top-categories/TopCategoriesList'
+import TopCategoryCreate from './pages/admin/top-categories/TopCategoryCreate'
+import TopCategoryEdit from './pages/admin/top-categories/TopCategoryEdit'
 
 function AppContent() {
   return (
@@ -42,6 +45,9 @@ function AppContent() {
         <Route path="promo-banners" element={<PromoBannersList />} />
         <Route path="promo-banners/create" element={<PromoBannerCreate />} />
         <Route path="promo-banners/edit/:id" element={<PromoBannerEdit />} />
+        <Route path="top-categories" element={<TopCategoriesList />} />
+        <Route path="top-categories/create" element={<TopCategoryCreate />} />
+        <Route path="top-categories/edit/:id" element={<TopCategoryEdit />} />
       </Route>
     </Routes>
   );

@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { FaImage, FaUsers, FaShoppingCart, FaChartLine } from 'react-icons/fa';
-import { useGetHeroBannersQuery } from '../../services';
+import { useGetHeroBannersQuery, useGetTopCategoriesQuery } from '../../services';
 
 function AdminDashboard() {
   const { data: banners = [] } = useGetHeroBannersQuery();
+  const { data: topCategories = [] } = useGetTopCategoriesQuery();
   const bannersCount = banners.length;
+  const topCategoriesCount = topCategories.length;
 
   const stats = [
     {
@@ -15,10 +17,10 @@ function AdminDashboard() {
       color: 'bg-blue-500'
     },
     {
-      title: 'Total Users',
-      count: '245',
+      title: 'Top Categories',
+      count: topCategoriesCount.toString(),
       icon: <FaUsers className="w-8 h-8" />,
-      link: '#',
+      link: '/admin/top-categories',
       color: 'bg-green-500'
     },
     {

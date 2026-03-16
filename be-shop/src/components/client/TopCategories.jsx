@@ -1,28 +1,13 @@
 import { useState } from "react";
-import img1 from "../../assets/images/top-categories-img1.jpg";
-import img2 from "../../assets/images/top-categories-img2.jpg";
-import img3 from "../../assets/images/top-categories-img3.jpg";
+import { useGetTopCategoriesQuery } from "../../services";
 
 export default function TopCategories() {
   const [hoveredId, setHoveredId] = useState(null);
-
-  const categories = [
-    {
-      id: 1,
-      title: "SPA",
-      image: img1,
-    },
-    {
-      id: 2,
-      title: "NAIL",
-      image: img2,
-    },
-    {
-      id: 3,
-      title: "JEWELRY",
-      image: img3,
-    },
-  ];
+  const {
+    data: categories = [],
+    isLoading: loading,
+    error,
+  } = useGetTopCategoriesQuery();
 
   return (
     <section className="py-16 px-4 bg-white">
@@ -40,42 +25,52 @@ export default function TopCategories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {categories.map((category) => (
-            <div
-              key={category.id}
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
-              onMouseEnter={() => setHoveredId(category.id)}
-              onMouseLeave={() => setHoveredId(null)}
-            >
-              <div className="relative w-full h-96 bg-gray-300 flex items-center justify-center overflow-hidden">
-                {category.image && (
-                  <img
-                    src={category.image}
-                    alt={category.title}
-                    className="w-full h-full object-cover"
-                  />
-                )}
+        {loading ? (
+          <div className="flex items-center justify-center h-64">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-500"></div>
+          </div>
+        ) : error ? (
+          <div className="text-center py-12 text-red-500">Failed to load top categories</div>
+        ) : categories.length === 0 ? (
+          <div className="text-center py-12 text-gray-500">No top categories available</div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {categories.map((category) => (
+              <div
+                key={category.id}
+                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                onMouseEnter={() => setHoveredId(category.id)}
+                onMouseLeave={() => setHoveredId(null)}
+              >
+                <div className="relative w-full h-96 bg-gray-300 flex items-center justify-center overflow-hidden">
+                  {category.imageUrl && (
+                    <img
+                      src={category.imageUrl}
+                      alt={category.title || category.name || "Category"}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
 
-                {hoveredId === category.id && (
-                  <div className="absolute inset-0 bg-opacity-50 transition-all duration-300 flex flex-col items-center justify-center">
-                    <div className="text-center text-white animate-fadeIn">
-                      <h3 className="text-3xl font-bold mb-6">
-                        {category.title}
-                      </h3>
-                      <div className="flex items-center gap-2 justify-center hover:gap-3 transition-all duration-300">
-                        <span className="text-sm tracking-widest">
-                          BROWSE PRODUCTS
-                        </span>
-                        <span className="text-xl">→</span>
+                  {hoveredId === category.id && (
+                    <div className="absolute inset-0 bg-opacity-50 transition-all duration-300 flex flex-col items-center justify-center">
+                      <div className="text-center text-white animate-fadeIn">
+                        <h3 className="text-3xl font-bold mb-6">
+                          {category.title || category.name || "CATEGORY"}
+                        </h3>
+                        <div className="flex items-center gap-2 justify-center hover:gap-3 transition-all duration-300">
+                          <span className="text-sm tracking-widest">
+                            BROWSE PRODUCTS
+                          </span>
+                          <span className="text-xl">→</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

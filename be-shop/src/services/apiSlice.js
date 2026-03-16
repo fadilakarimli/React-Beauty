@@ -25,7 +25,7 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
 export const apiSlice = createApi({
   reducerPath: 'api',
   baseQuery: baseQueryWithReauth,
-  tagTypes: ['HeroBanner', 'PromoBanner', 'ShowcaseLogo'],
+  tagTypes: ['HeroBanner', 'PromoBanner', 'ShowcaseLogo', 'TopCategory'],
   endpoints: (builder) => ({
     // Hero Banners
     getHeroBanners: builder.query({
@@ -125,6 +125,39 @@ export const apiSlice = createApi({
       }),
       invalidatesTags: ['ShowcaseLogo'],
     }),
+
+    // Top Categories
+    getTopCategories: builder.query({
+      query: () => '/TopCategories',
+      providesTags: ['TopCategory'],
+    }),
+    getTopCategoryById: builder.query({
+      query: (id) => `/TopCategories/${id}`,
+      providesTags: (result, error, id) => [{ type: 'TopCategory', id }],
+    }),
+    createTopCategory: builder.mutation({
+      query: (formData) => ({
+        url: '/TopCategories',
+        method: 'POST',
+        body: formData,
+      }),
+      invalidatesTags: ['TopCategory'],
+    }),
+    updateTopCategory: builder.mutation({
+      query: ({ id, data }) => ({
+        url: `/TopCategories/${id}`,
+        method: 'PUT',
+        body: data,
+      }),
+      invalidatesTags: (result, error, { id }) => [{ type: 'TopCategory', id }, 'TopCategory'],
+    }),
+    deleteTopCategory: builder.mutation({
+      query: (id) => ({
+        url: `/TopCategories/${id}`,
+        method: 'DELETE',
+      }),
+      invalidatesTags: ['TopCategory'],
+    }),
   }),
 });
 
@@ -149,4 +182,11 @@ export const {
   useCreateShowcaseLogoMutation,
   useUpdateShowcaseLogoMutation,
   useDeleteShowcaseLogoMutation,
+
+  // Top Categories
+  useGetTopCategoriesQuery,
+  useGetTopCategoryByIdQuery,
+  useCreateTopCategoryMutation,
+  useUpdateTopCategoryMutation,
+  useDeleteTopCategoryMutation,
 } = apiSlice;
